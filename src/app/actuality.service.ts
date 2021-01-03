@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
+import { newsCatcherApiKey } from 'src/environments/environment';
 import { Actuality } from './actuality';
 
 @Injectable({
@@ -18,7 +19,7 @@ export class ActualityService {
       url: 'https://newscatcher.p.rapidapi.com/v1/latest_headlines',
       params: {lang: 'en', country: 'fr', media: 'True'},
       headers: {
-        'x-rapidapi-key': '025bfa9baamshb49158451dda52ap1d43cbjsnaba7c9afa508',
+        'x-rapidapi-key': newsCatcherApiKey,
         'x-rapidapi-host': 'newscatcher.p.rapidapi.com'
       }
     } as any;
